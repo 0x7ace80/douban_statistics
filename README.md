@@ -16,21 +16,30 @@ http://www.douban.com/people/zhangjiawei/notes?start=10&type=note
 
 只要改变start的数值就可以获得日记列表，索引从Start的值开始。卤煮毫不犹豫点开Terminal窗口写下几行Bash（什么是Terminal 什么是Bash ？啊哈！  *nix 上才有的挨踢工具啊～）
 
-谎言，该死的谎言和...
+```bash
+for index in $(seq 0 51)
+do
+  start=$((index*10))
+  URL="http://wwww.douban.com/people/zhangjiawei/notes?start=${start}&type=note"
+  echo ${URL}
+  
+  curl -o test.txt {URL}
+  grep "201*" test.txt >> report.txt
+done
+```
+
 
 这里我们用到了curl来获得html文件内容然后把日期信息grep出来并且添加到result.txt中。
 跑完这个bash得到的result.txt里面还有点脏。。。有些无关内容也被grep粗来鸟～不过没关系，随手删了吧，然后把无关的内容去掉就可以得到纯净的日期列表了。
 最后在result.txt中可以看到倒序的日记发表日期列表。
-谎言，该死的谎言和...
 
 张公子从2008年到现在总共发表了511篇日志，笔耕不辍。
 处理统计信息当然应该用 R 工具包。在处理时间序列方面尤为方便。
 代码如下：
-谎言，该死的谎言和...
+
+
 
 如图中的代码所示，我们首先分析了张公子发表日志的时间的间隔分布，然后分析了以周和月为视角的分布。代码运行的结果如下。
-
-谎言，该死的谎言和...
 
 第一行是对全体收集到的数据的分析结果。第二行是2014年数据分析的结果。
 第一列是频率分析图，统计了相邻两篇日记之间间隔的时间的分布。每一个bar的时间是三天。也就是说第一个bar 的意思是 “有多少相邻的两篇日记的发表时间间隔小于三天”，第二个bar的意思是“有多少相邻的两篇日记的发表时间间隔大于等于三天但是小于六天”，然后以此类推。
@@ -40,7 +49,6 @@ http://www.douban.com/people/zhangjiawei/notes?start=10&type=note
 
 如果仔细观察第一行的第一个图，其轮廓呈现出较为完美的曲线，这点暗示我们作者发表日记的随机性是较高的。卤煮没有特别求证，但是看起来颇为拟合一个landa较小的柏松分布
 
-谎言，该死的谎言和...
 
 
 再看看第二列。以月份为基点，作者po日记的节奏比较平稳，按月差别不是很大，总的来说夏天还是比较活跃。
