@@ -3,6 +3,7 @@ A Statistics Research of Blogger at Douban.
 
 “These are lies, damned lies and statistics" -- Mark Twain
 
+本文写作于 2015-01-08
 豆瓣上的张佳玮
 http://www.douban.com/people/zhangjiawei/
 
@@ -27,7 +28,6 @@ do
   grep "201*" test.txt >> report.txt
 done
 ```
-
 
 这里我们用到了curl来获得html文件内容然后把日期信息grep出来并且添加到result.txt中。
 跑完这个bash得到的result.txt里面还有点脏。。。有些无关内容也被grep粗来鸟～不过没关系，随手删了吧，然后把无关的内容去掉就可以得到纯净的日期列表了。
