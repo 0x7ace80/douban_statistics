@@ -89,7 +89,7 @@ barplot(week_bar_2014, names.arg=weekname_eng);
 
 如代码所示，我们首先分析了张公子发表日志的时间的间隔分布，然后分析了以周和月为视角的分布。代码运行的结果如下。
 
-![Result](https://github.com/0x7ace80/douban_statistics/raw/master/001PI1gJty6P19nrYjJef&690.jpg)
+![Result](http://github.com/0x7ace80/douban_statistics/raw/master/001PI1gJty6P19nrYjJef&690.jpg)
 
 第一行是对全体收集到的数据的分析结果。第二行是2014年数据分析的结果。
 第一列是频率分析图，统计了相邻两篇日记之间间隔的时间的分布。每一个bar的时间是三天。也就是说第一个bar 的意思是 “有多少相邻的两篇日记的发表时间间隔小于三天”，第二个bar的意思是“有多少相邻的两篇日记的发表时间间隔大于等于三天但是小于六天”，然后以此类推。
@@ -100,7 +100,7 @@ barplot(week_bar_2014, names.arg=weekname_eng);
 如果仔细观察第一行的第一个图，其轮廓呈现出较为完美的曲线，这点暗示我们作者发表日记的随机性是较高的。卤煮没有特别求证，但是看起来颇为拟合一个landa较小的柏松分布
 
 
-![Poission](https://github.com/0x7ace80/douban_statistics/raw/master/001PI1gJty6P19pFzfT4d&690.jpg)
+![Poission](http://github.com/0x7ace80/douban_statistics/raw/master/001PI1gJty6P19pFzfT4d&690.jpg)
 
 
 再看看第二列。以月份为基点，作者po日记的节奏比较平稳，按月差别不是很大，总的来说夏天还是比较活跃。
