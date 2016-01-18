@@ -16,7 +16,7 @@ A Statistics Research of A Blogger at Douban.
 
 `http://www.douban.com/people/zhangjiawei/notes?start=10&type=note`
 
-只要改变start的数值就可以获得日记列表，索引从Start的值开始。卤煮毫不犹豫点开Terminal窗口写下几行Bash（什么是Terminal 什么是Bash ？啊哈！  *nix 上才有的挨踢工具啊～）
+只要改变start的数值就可以获得日记列表，索引从Start的值开始。用Bash实现如下：
 
 ```bash
 for index in $(seq 0 51)
@@ -30,8 +30,8 @@ do
 done
 ```
 
-这里我们用到了curl来获得html文件内容然后把日期信息grep出来并且添加到result.txt中。
-跑完这个bash得到的result.txt里面还有点脏。。。有些无关内容也被grep粗来鸟～不过没关系，随手删了吧，然后把无关的内容去掉就可以得到纯净的日期列表了。
+这里我们用curl来获得html文件内容然后把日期信息grep出来并且添加到result.txt中。
+跑完这个bash得到的result.txt里面还有点脏。。。有些无关内容也被grep粗来～不过没关系，随手删了吧，然后把无关的内容去掉就可以得到纯净的日期列表了。
 最后在result.txt中可以看到倒序的日记发表日期列表。
 
 张公子从2008年到现在总共发表了511篇日志，笔耕不辍。
