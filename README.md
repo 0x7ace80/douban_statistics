@@ -1,5 +1,5 @@
 # douban_statistics
-A Statistics Research of Blogger at Douban.
+A Statistics Research of A Blogger at Douban.
 
 “These are lies, damned lies and statistics" -- Mark Twain
 
