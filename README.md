@@ -4,8 +4,9 @@ A Statistics Research of Blogger at Douban.
 “These are lies, damned lies and statistics" -- Mark Twain
 
 本文写作于 2015-01-08
+
 豆瓣上的张佳玮
-http://www.douban.com/people/zhangjiawei/
+`http://www.douban.com/people/zhangjiawei`
 
 他的豆瓣日记从2008年到现在一直保持了一个较高的更新频率。日记内容是相当棒的，颇值一读。而且几乎每篇的内容都相对独立。看起来作者都是兴致所至提笔写成一篇日记。卤煮突然醒悟：这不就是统计学上典型的“独立同分布”么？处理这样的样本好处就是“贝叶斯”老师和“马尔可夫”老师都不用请了。他们最近在Google，Apple这些公司很忙的。整天战斗在反垃圾邮件和Siri语音识别的第一线。
 
@@ -13,7 +14,7 @@ http://www.douban.com/people/zhangjiawei/
 
 首先解决数据获取的问题，观察了豆瓣日记的URL格式可以发现URL的格式非常固定
 
-http://www.douban.com/people/zhangjiawei/notes?start=10&type=note
+`http://www.douban.com/people/zhangjiawei/notes?start=10&type=note`
 
 只要改变start的数值就可以获得日记列表，索引从Start的值开始。卤煮毫不犹豫点开Terminal窗口写下几行Bash（什么是Terminal 什么是Bash ？啊哈！  *nix 上才有的挨踢工具啊～）
 
